@@ -1,7 +1,6 @@
 const { Schema, model } = require("mongoose");
-const { nanoid } = require('nanoid');
 
-module.exports = model("Urls", new Schema({
+module.exports = model("Url", new Schema({
 	origin:{
 		type:String,
 		unique:true,
@@ -10,7 +9,6 @@ module.exports = model("Urls", new Schema({
 	shortURL:{
 		type:String,
 		unique:true,
-		require:true,
-		default:nanoid(6)
+		require:true
 	}
 }));
